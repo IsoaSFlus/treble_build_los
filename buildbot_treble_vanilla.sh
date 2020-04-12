@@ -1,6 +1,6 @@
 #!/bin/bash
 
-repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
+#repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
 
 cd frameworks/base
 git am ../../0001-Squashed-revert-of-LOS-FOD-implementation.patch
@@ -47,7 +47,7 @@ cd ../..
 cd device/phh/treble
 git revert 82b15278bad816632dcaeaed623b569978e9840d --no-edit #Update lineage.mk for LineageOS 16.0
 git am ../../../0001-Remove-fsck-SELinux-labels.patch
-git am ../../../0001-treble-Add-overlay-lineage.patch
+#git am ../../../0001-treble-Add-overlay-lineage.patch
 git am ../../../0001-treble-Don-t-specify-config_wallpaperCropperPackage.patch
 git am ../../../0001-Increase-system-partition-size-for-arm_ab.patch
 git am ../../../0001-TEMP-treble-Fix-init.treble-environ.rc-hardcode-for-.patch
@@ -66,8 +66,9 @@ echo ""
 echo "CHECK PATCH STATUS NOW!"
 sleep 5
 echo ""
+exit
 
-lunch treble_arm64_avN-userdebug
+lunch treble_arm64_bgN-userdebug
 make WITHOUT_CHECK_API=true installclean
 make WITHOUT_CHECK_API=true systemimage
 make WITHOUT_CHECK_API=true vndk-test-sepolicy
