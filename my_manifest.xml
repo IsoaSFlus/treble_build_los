@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="opengapps" fetch="https://gitlab.opengapps.org/opengapps/"  />
+	<remote name="opengappsold" fetch="http://github.com/opengapps/"  />
+	<project path="vendor/opengapps/build" name="aosp_build" revision="master" remote="opengappsold" />
+	<project path="vendor/opengapps/sources/all" name="all" clone-depth="1" revision="master" remote="opengapps" />
+		<!-- arm64 depends on arm -->
+	<project path="vendor/opengapps/sources/arm" name="arm" clone-depth="1" revision="master" remote="opengapps" />
+	<project path="vendor/opengapps/sources/arm64" name="arm64" clone-depth="1" revision="master" remote="opengapps" />
+	<project path="vendor/opengapps/sources/x86" name="x86" clone-depth="1" revision="master" remote="opengapps" />
+	<project path="vendor/opengapps/sources/x86_64" name="x86_64" clone-depth="1" revision="master" remote="opengapps" />
+
+	<project name="phhusson/vendor_hardware_overlay" path="vendor/hardware_overlay" remote="github" revision="pie" />
+	<project name="IsoaSFlus/device_phh_treble" path="device/phh/treble" remote="github" revision="android-10.0" />
+	<project name="phhusson/vendor_vndk" path="vendor/vndk" remote="github" revision="android-10.0" />
+	<project name="phhusson/vendor_vndk-tests" path="vendor/vndk-tests" remote="github" revision="master" />
+	<project name="phhusson/vendor_interfaces" path="vendor/interfaces" remote="github" revision="pie" />
+	<project name="phhusson/vendor_magisk" path="vendor/magisk" remote="github" revision="android-10.0" />
+
+	<project name="IsoaSFlus/android_vendor_Lawnchair" path="vendor/Lawnchair" remote="github" />
+	<project name="IsoaSFlus/android_external_pingfang-fonts" path="external/pingfang-fonts" remote="github" />
+</manifest>
