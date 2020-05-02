@@ -17,6 +17,6 @@
 	<project name="phhusson/vendor_interfaces" path="vendor/interfaces" remote="github" revision="pie" />
 	<project name="phhusson/vendor_magisk" path="vendor/magisk" remote="github" revision="android-10.0" />
 
-	<project name="IsoaSFlus/android_vendor_Lawnchair" path="vendor/Lawnchair" remote="github" />
-	<project name="IsoaSFlus/android_external_pingfang-fonts" path="external/pingfang-fonts" remote="github" />
+	<project name="IsoaSFlus/android_vendor_Lawnchair" path="vendor/Lawnchair" remote="github" revision="master" />
+	<project name="IsoaSFlus/android_external_pingfang-fonts" path="external/pingfang-fonts" remote="github" revision="master" />
 </manifest>
