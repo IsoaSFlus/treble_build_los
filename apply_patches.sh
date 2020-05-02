@@ -28,10 +28,10 @@ cd frameworks/base
 # git am $BL/patches/0001-Squashed-revert-of-LOS-FOD-implementation.patch
 cd ../..
 rm -f device/*/sepolicy/common/private/genfs_contexts
-cd device/phh/treble
-git clean -fdx
-bash generate.sh lineage
-cd ../../..
+#cd device/phh/treble
+#git clean -fdx
+#bash generate.sh lineage
+#cd ../../..
 bash ~/treble_experimentations/apply-patches.sh treble_patches
 echo ""
 
